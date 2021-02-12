@@ -8,11 +8,11 @@
 u1 = User.create(username: "U1", email: "u1@email.com", password: "abc123")
 u2 = User.create(username: "U2", email: "u2@email.com", password: "abc123")
 
-a1 = Activity.create(name: "Act1")
-a2 = Activity.create(name: "Act2")
-a3 = Activity.create(name: "Act3")
-a4 = Activity.create(name: "Act4")
-a5 = Activity.create(name: "Act5")
+a1 = Activity.create(name: "Act1", description: "Is a jolly good time!")
+a2 = Activity.create(name: "Act2", description: "Kinda sucks when it rains")
+a3 = Activity.create(name: "Act3", description: "Really fun in pairs")
+a4 = Activity.create(name: "Act4", description: "Best to do alone")
+a5 = Activity.create(name: "Act5", description: "A wild time for the whole family")
 
 p1 = Post.create(user_id: u1.id, activity_id: a1.id, title: "Title", body: "body")
 p2 = Post.create(user_id: u1.id, activity_id: a2.id, title: "Title", body: "body")

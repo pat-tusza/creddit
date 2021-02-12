@@ -1,4 +1,10 @@
 # README
  #Things to do:
 
- add descpitions to activities in tables and seed data
+Add errors to login/signup screens
+Add login screen
+add post feild
+add comment feild
+add authorizations to pages
+add css
+

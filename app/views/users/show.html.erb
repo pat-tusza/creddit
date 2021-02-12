@@ -6,6 +6,7 @@
     <% @activities.each do |activity| %>
     <li>
         <%= link_to activity.name, activity_path(activity.id)%>
+        <%# <%= button_to "Add to Favorites", "/favorites/"%> 
     </li>
         <% end %>
 </ul>
