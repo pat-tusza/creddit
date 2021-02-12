@@ -1,0 +1,21 @@
+<h1> Welcome Back <%=@user.username%>! </h1>
+
+<h2>All Activities </h2>
+
+<ul>
+    <% @activities.each do |activity| %>
+    <li>
+        <%= link_to activity.name, activity_path(activity.id)%>
+    </li>
+        <% end %>
+</ul>
+
+<h3> Your Favorites </h3>
+
+<ul>
+    <% @user.favorites.each do |fav| %>
+    <li>
+        <%= link_to fav.activity.name, activity_path(fav.activity.id)%>
+    </li>
+        <% end %>
+</ul>

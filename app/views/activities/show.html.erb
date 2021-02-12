@@ -1,0 +1,14 @@
+<h1> <%=@activity.name%> </h1>
+
+<h2> What is <%=@activity.name%> </h2>
+<p> This is a placeholder for act description will be in model as act.desc </p>
+
+<h3> What people are saying: </h3>
+
+<ol>
+    <% @activity.posts.each do |post| %>
+    <li>
+        <%= link_to post.title, post_path(post.id) %>
+    </li>
+        <%end%>
+</ol>
