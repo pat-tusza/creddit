@@ -5,7 +5,7 @@ class ActivitiesController < ApplicationController
 
     def show 
       @activity = Activity.find(params[:id])
-      @user = session[:user_id]
+      @user = User.find(session[:user_id])
     end
 
 

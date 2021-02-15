@@ -1,5 +1,7 @@
 <h1>Login Here </h1>
 
+<%= render "/shared/errors" %>
+
 <%= form_tag "/handle_login" do %>
     <%= label_tag :username %>
     <%= text_field_tag :username %>

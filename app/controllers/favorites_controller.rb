@@ -13,7 +13,7 @@ class FavoritesController < ApplicationController
   
       def create 
         @favorite = Favorite.create(favorite_params)
-        redirect_to ??
+        redirect_to user_path(@favorite.user.id)
       end
   
       def edit 
@@ -35,6 +35,7 @@ class FavoritesController < ApplicationController
       private 
   
       def favorite_params
-          params.permit(:favorite).permit(:)
+          params.permit(:user_id, :activity_id)
       end
 end
+# .require(:favorite)

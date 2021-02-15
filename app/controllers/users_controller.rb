@@ -1,25 +1,25 @@
 class UsersController < ApplicationController
   skip_before_action :authorized, only: [:login, :handle_login, :new, :create]
 
-      def login
+  def login
 
-      end
+  end
 
-      def handle_login
-        @user = User.find_by(username: params[:username])
-        if @user && @user.authenticate(params[:password])
+  def handle_login
+    @user = User.find_by(username: params[:username])
+    if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             redirect_to user_path(@user)
         else
             flash[:errors] = ["Incorrect Username or Password"]
             redirect_to login_path
         end
-      end
+  end
 
-      def logout
-        logout_user
-        redirect_to login_path
-      end
+  def logout
+    logout_user
+    redirect_to login_path
+  end
 
   
       
@@ -30,6 +30,11 @@ class UsersController < ApplicationController
       def show 
         @user = User.find(params[:id])
         @activities = Activity.all
+        
+        # unless current_user == @user.id
+        #   redirect_to user_path(current_user.id)
+        # end
+
       end
   
       def new 
@@ -38,8 +43,16 @@ class UsersController < ApplicationController
   
       def create 
         @user = User.create(user_params)
-        redirect_to user_path(@user)
+        if @user.valid?
+          session[:user_id] = @user.id
+          redirect_to user_path(@user)
+        else
+          flash[:errors] = @user.errors.full_messages
+          # flash[:attributes] = @user.attributes
+          redirect_to new_user_path
+        end
       end
+       
   
       def edit 
           @user = User.find(params[:id])

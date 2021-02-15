@@ -12,8 +12,10 @@ class CommentsController < ApplicationController
       end
   
       def create 
+        # byebug
         @comment = Comment.create(comment_params)
-        redirect_to ??
+        
+        redirect_to post_path(@comment.post_id)
       end
   
       def edit 
@@ -35,6 +37,7 @@ class CommentsController < ApplicationController
       private 
   
       def comment_params
-          params.permit(:comment).permit(:body)
+          params.permit(:body, :user_id, :post_id)
       end
 end
+# .require(:comment)
