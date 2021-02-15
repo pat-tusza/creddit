@@ -5,15 +5,19 @@ class PostsController < ApplicationController
   
       def show 
         @post = Post.find(params[:id])
+        @user = session[:user_id]
       end
   
       def new 
         @post = Post.new
+        @activity = Activity.all
+        @user = session[:user_id]
       end
   
       def create 
         @post = Post.create(post_params)
-        redirect_to ??
+
+        redirect_to post_path(@post.id)
       end
   
       def edit 
@@ -35,6 +39,6 @@ class PostsController < ApplicationController
       private 
   
       def post_params
-          params.permit(:post).permit(:title, :body)
+        params.require(:post).permit(:title, :body, :user_id, :activity_id )
       end
 end

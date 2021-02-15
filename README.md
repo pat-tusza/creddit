@@ -6,5 +6,6 @@ Add login screen
 add post feild
 add comment feild
 add authorizations to pages
+add edit feature to user: password emial and username
 add css
 
