@@ -38,3 +38,40 @@ body {
     background: linear-gradient(270deg, rgba(56,55,55,1) 0%, rgba(94,94,98,1) 46%, rgba(176,176,176,1) 100%);    
 }
 
+.push{
+    position: relative;
+    left: 17px;
+}
+
+.pixel {
+    position: relative;
+    left: 2px;
+}
+
+.t1 {
+    font-family: palatino;
+    text-decoration: underline;
+    font-size: 50px;
+}
+
+.list {
+    font-size: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
