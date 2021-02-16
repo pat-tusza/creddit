@@ -2,12 +2,14 @@
 
 <p> <%=@post.body%> </p>
 
+
 <h2> Comments </h2>
 
 <ol>
     <% @post.comments.each do |comment| %>
         <li>
             <%= comment.body%>
+            <p> <%= comment.user.username%> </p>
         </li>
     <%end%>
 </ol>
