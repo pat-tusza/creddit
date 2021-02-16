@@ -1,25 +1,29 @@
-<h1> <%=@post.title%> </h1>
 
-<p> <%=@post.body%> </p>
+<div class = "main">
+<p class = "title"> <%=@post.title%> </p>
+<p class= "sub"> <%=@post.body%> </p>
+</div>
 
 
-<h2> Comments </h2>
+<p class = "comment"> Comments </p>
 
 <ol>
     <% @post.comments.each do |comment| %>
-        <li>
+        <ul class = "post">
             <%= comment.body%>
-            <p> <%= comment.user.username%> </p>
-        </li>
+            <p> By: <%= comment.user.username%> </p>
+        </ul>
     <%end%>
 </ol>
 
 <%= form_tag "/comments" do %>
-    <%= label_tag :body %>
+    
     <%= text_area_tag :body %>
     <%= hidden_field_tag :user_id, @user%>
     <%= hidden_field_tag :post_id, @post.id %>
-    <%= submit_tag "Submit" %>
+    <p>
+    <%= submit_tag "Submit a Comment" %>
+    </p>
 <% end  %>
 
 <%= button_to "#{@post.activity.name}",activity_path(@post.activity.id), method: "get"  %>

@@ -1,13 +1,13 @@
 <h1> <%=@activity.name%> </h1>
 
-<h2> What is <%=@activity.name%>? </h2>
-<p> <%= @activity.description%> </p>
+<p class = "t1"> What is <%=@activity.name%>? </p>
+<p class = "description"> <%= @activity.description%> </p>
 
-<h3> What people are saying: </h3>
+<p class = "saying"> What people are saying: </p>
 
 <ol>
     <% @activity.posts.each do |post| %>
-    <ul>
+    <ul class = "post">
         <%= link_to post.title, post_path(post.id) %>
         By: <%= post.user.username %>
     </ul>

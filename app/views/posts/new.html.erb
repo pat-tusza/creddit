@@ -5,8 +5,11 @@
     <%= f.text_field :title %>
     <%= f.label :activity%>
     <%= f.collection_select :activity_id, @activity, :id, :name %>
-    <p> Body: </p>
+    <p>
     <%= f.text_area :body, cols: 100, rows: 20 %> 
+    </p>
     <%= f.hidden_field :user_id, value: @user%>
+    <p>
     <%= f.submit%>
+    </p>
 <%end%>

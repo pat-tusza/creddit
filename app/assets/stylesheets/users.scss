@@ -49,6 +49,7 @@ body {
 
 .list {
     font-size: 25px;
+    font-family: palatino;
 }
 
 * {
@@ -76,4 +77,44 @@ body {
     font-size: 15px;
     position: relative;
     left: -15px;
+}
+
+.description {
+    font-family: palatino;
+    font-size: 18px;
+}
+
+.saying {
+    font-family: palatino;
+    font-size: 25px;
+}
+
+.post {
+    font-family: palatino;
+    font-size: 20px;
+    border: 3px groove black;
+    padding: 20px;
+    border-radius: 6px
+}
+
+.main {
+    border: 3px groove black;
+    padding: 20px;
+    border-radius: 6px
+}
+
+.title {
+    font-family: palatino;
+    font-size: 35px;
+    font-weight: bold
+}
+
+.sub {
+    font-family: palatino;
+    font-size: 20px;
+}
+
+.comment {
+    font-family: palatino;
+    font-size: 25px;
 }
