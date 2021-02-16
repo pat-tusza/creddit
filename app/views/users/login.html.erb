@@ -1,13 +1,27 @@
-<h1>Login Here </h1>
+<head>
+<%# <link href=".stylesheets/users.scss" type="text/scss" rel="stylesheet"> %>
+</head>
+
+<body>
+
+<h1 class= "central">Welcome to Placeholder </h1>
 
 <%= render "/shared/errors" %>
 
+<div>
 <%= form_tag "/handle_login" do %>
     <%= label_tag :username %>
     <%= text_field_tag :username %>
-    <%= label_tag :password, "Enter Your Password:" %>
+    <p>
+    <%= label_tag :password, "Password:" %>
     <%= password_field_tag :password %>
-    <%= submit_tag "Login" %>
+    </p>
+    <p>
+    <%= submit_tag "Login", class: "button" %>
+    </p>
 <% end %> 
 
-<%= button_to "Sign up!", new_user_path, method: "get" %>
+<%= button_to "Sign up!", new_user_path, method: "get", class: "button" %>
+</div>
+
+</body>
