@@ -1,9 +1,9 @@
 <% if flash[:errors] %>
     <ul>
         <% flash[:errors].each do |message| %>
-            <li>
+            <p class = "red">
                 <%= message %>
-            </li>
+            </p>
         <% end %>
     </ul>
 <% end %>

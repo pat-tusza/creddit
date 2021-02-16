@@ -7,9 +7,10 @@
 
 <ol>
     <% @activity.posts.each do |post| %>
-    <li>
+    <ul>
         <%= link_to post.title, post_path(post.id) %>
-    </li>
+        By: <%= post.user.username %>
+    </ul>
         <%end%>
 </ol>
 
