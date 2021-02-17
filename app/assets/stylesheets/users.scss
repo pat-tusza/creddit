@@ -7,17 +7,20 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 60px;
+    color: #EDF5E1
 }
 
 
 .borders {
     text-align: center;
     font-family: palatino;
-    border: 3px groove black;
+    border: 3px solid #EDF5E1;
     margin-left: 555px;
     margin-right: 555px;
     padding: 20px;
-    border-radius: 6px
+    border-radius: 6px;
+    background-color: #05386B;
+    color: #EDF5E1
 }
 
 .button {
@@ -27,8 +30,9 @@ h1 {
 body {
     background-attachment: fixed;  
     background-size: cover;
-    background: rgb(56,55,55);
-    background: linear-gradient(270deg, rgba(56,55,55,1) 0%, rgba(94,94,98,1) 46%, rgba(176,176,176,1) 100%);    
+    background: #5CDB95;
+    // background: rgb(56,55,55);
+    // background: linear-gradient(270deg, rgba(56,55,55,1) 0%, rgba(94,94,98,1) 46%, rgba(176,176,176,1) 100%);    
 }
 
 .push{
@@ -45,6 +49,7 @@ body {
     font-family: palatino;
     text-decoration: underline;
     font-size: 50px;
+    color: #05386B;
 }
 
 .list {
@@ -92,15 +97,19 @@ body {
 .post {
     font-family: palatino;
     font-size: 20px;
-    border: 3px groove black;
+    color: #05386B;
+    border: 3px solid #05386B;
     padding: 20px;
-    border-radius: 6px
+    border-radius: 6px;
+    background-color: #EDF5E1;
 }
 
 .main {
-    border: 3px groove black;
+    color: #05386B;
+    border: 3px solid #05386B;
     padding: 20px;
-    border-radius: 6px
+    border-radius: 6px;
+    background-color: #EDF5E1;
 }
 
 .title {

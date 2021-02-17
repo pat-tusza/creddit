@@ -8,8 +8,9 @@
 <ol>
     <% @activity.posts.each do |post| %>
     <ul class = "post">
-        <%= link_to post.title, post_path(post.id) %>
+        <p><%= link_to post.title, post_path(post.id) %>
         By: <%= post.user.username %>
+        </p>
     </ul>
         <%end%>
 </ol>

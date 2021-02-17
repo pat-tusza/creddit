@@ -7,7 +7,7 @@ add post feild ✅
 add comment feild try form tag ✅
 add authorizations to pages ✅
 add edit feature to user: password email and username
-add css
+add css ✅
 
 seed real activities
 

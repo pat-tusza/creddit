@@ -39,4 +39,3 @@ class FavoritesController < ApplicationController
           params.permit(:user_id, :activity_id)
       end
 end
-# .require(:favorite)
