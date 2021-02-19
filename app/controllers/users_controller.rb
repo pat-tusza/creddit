@@ -69,8 +69,16 @@ class UsersController < ApplicationController
         @user.destroy
         redirect_to ??
       end
+
+      def mailbox 
+        @user = User.find(params[:id])
+        @receive = Message.where(receiver_id: @user.id)
+        @sent = Message.where(sender_id: @user.id)
+      end
+
   
       private 
+
   
       def user_params
           params.require(:user).permit(:username, :email, :password)

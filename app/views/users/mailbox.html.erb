@@ -1,0 +1,22 @@
+<p> <%=@user.username%>'s Mailbox </p>
+
+<p class= "t1"> Received Mail </p>
+<ol>
+    <% @receive.each do |rec|%>
+    <ul class = "post">
+        <%= link_to rec.title, message_path(rec.id)%>
+        <%= rec%>
+    </ul>
+    <%end%>
+</ol>
+
+<p class= "t1"> Sent Mail </p>
+<ol>
+    <% @sent.each do |send|%>
+    <ul class = "post">
+        <%= link_to send.title, message_path(send.id)%>
+    </ul>
+    <%end%>
+</ol>
+
+<%= button_to "Back to Homepage", user_path(@user), method: "get" %>

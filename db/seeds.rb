@@ -31,4 +31,6 @@ c4 = Comment.create(user_id: u2.id, post_id: p3.id, body: "We dont condone illeg
 
 f1 = Favorite.create(user_id: u1.id, activity_id: a5.id)
 
+m1 = Message.create(sender_id: u1.id, receiver_id: u2.id, title: "This is a test of the messages", body: "Holy cow we can send messages")
+m2 = Message.create(sender_id: u2.id, receiver_id: u1.id, title: "This is crazy", body: "Isnt rails fun and exciting?")
 puts "🌱"
