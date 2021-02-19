@@ -2,6 +2,8 @@
 <div class = "main">
 <p class = "title"> <%=@post.title%> </p>
 <p class= "sub"> <%=@post.body%> </p>
+<p> By: <%=@post.user.username%></p>
+<p class = "time"> <%= @post.created_at %> </p>
 </div>
 
 
@@ -12,6 +14,7 @@
         <ul class = "post">
             <%= comment.body%>
             <p> By: <%= comment.user.username%> </p>
+            <p class = "time"> <%= comment.created_at %> </p>
         </ul>
     <%end%>
 </ol>

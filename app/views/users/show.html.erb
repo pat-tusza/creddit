@@ -7,6 +7,7 @@
         <% @activities.each do |activity| %>
             <li class = 'list'>
                 <%= link_to activity.name, activity_path(activity.id)%>
+                
                 <%= button_to 'Add to Favorites', {:controller => "favorites", :action => "create", :user_id => @user, :activity_id=> activity} , :method=>:post, class: "button" %>
         
             </li>

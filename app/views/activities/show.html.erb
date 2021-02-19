@@ -11,6 +11,9 @@
         <p><%= link_to post.title, post_path(post.id) %>
         By: <%= post.user.username %>
         </p>
+        <p class = "time">
+        <%=post.created_at%>
+        </p>
     </ul>
         <%end%>
 </ol>
